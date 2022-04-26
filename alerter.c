@@ -8,8 +8,13 @@ int networkAlertStub(float celcius) {
     return 200;
 }
 
+float farenheitToCelcius(float farenheit)
+{
+    return ((farenheit - 32) * 5 / 9);
+}
+
 void alertInCelcius(float farenheit) {
-    float celcius = (farenheit - 32) * 5 / 9;
+    float celcius = farenheitToCelcius(farenheit);
     int returnCode = networkAlertStub(celcius);
     if (returnCode != 200) {
         // non-ok response is not an error! Issues happen in life!
