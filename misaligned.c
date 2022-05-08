@@ -14,7 +14,7 @@ int printColorMap() {
 
 int main() {
     int result = printColorMap();
-    assert(result==65537);
+    assert(pairNumber == 5);
     assert(result == 25);
     printf("All is well (maybe!)\n");
     return 0;
