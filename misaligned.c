@@ -4,8 +4,8 @@ int printColorMap() {
     const char* majorColor[] = {"White", "Red", "Black", "Yellow", "Violet"};
     const char* minorColor[] = {"Blue", "Orange", "Green", "Brown", "Slate"};
     int i = 0, j = 0;
-    for(i = 0; i < 5; i++) {
-        for(j = 0; j < 5; j++) {
+    for(i = 0; i < sizeof(majorColor); i++) {
+        for(j = 0; j < sizeof(minorColor); j++) {
             printf("%d | %s | %s\n", i * 5 + j, majorColor[i], minorColor[i]);
         }
     }
@@ -14,7 +14,7 @@ int printColorMap() {
 
 int main() {
     int result = printColorMap();
-    assert(pairNumber == 5);
+   
     assert(result == 25);
     printf("All is well (maybe!)\n");
     return 0;
